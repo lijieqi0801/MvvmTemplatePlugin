@@ -1,0 +1,10 @@
+package  $packageName_.vm
+
+import com.sandianji.sdjandroid.common.vm.BaseViewModel
+import android.arch.lifecycle.MutableLiveData
+import android.annotation.SuppressLint
+
+@SuppressLint("CheckResult")
+class $moduleName_VM : BaseViewModel(){
+    val liveData = MutableLiveData<Any>()
+}

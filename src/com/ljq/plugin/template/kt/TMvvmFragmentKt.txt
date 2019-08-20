@@ -1,0 +1,12 @@
+package $packageName_.ui.fragment
+
+import com.sandianji.sdjandroid.common.fragmtn.NewBaseFragment
+
+class $moduleName_Fragment : NewBaseFragment<Fragment$moduleName_Binding,$moduleName_VM>() {
+    override fun getLayoutId(): Int {
+        return $fragmentLayout
+    }
+    override fun providerViewModelClass(): Class<$moduleName_VM> {
+            return $moduleName_VM::class.java
+    }
+}

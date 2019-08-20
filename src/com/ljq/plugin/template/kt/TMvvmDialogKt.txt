@@ -1,0 +1,25 @@
+package $packageName_.ui.dialog
+import android.content.Context
+import android.databinding.DataBindingUtil
+import com.sandianji.sdjandroid.R
+import com.sandianji.sdjandroid.common.widget.dialog.CustomDialog
+
+class $moduleName_Dialog (context: Context):CustomDialog(context){
+    private val binding = DataBindingUtil.inflate<Dialog$moduleName_Binding>(
+            layoutInflater, $dialogLayout, null, false
+    )
+
+    init {
+        setView(binding.root)
+        setupClick()
+        setupView()
+    }
+
+    private fun setupView() {
+
+    }
+
+    private fun setupClick() {
+
+    }
+}

@@ -1,0 +1,14 @@
+package $packageName_.ui
+import com.sandianji.sdjandroid.common.activity.NewBaseActivity
+import com.sandianji.sdjandroid.R
+
+class $moduleName_Activity : NewBaseActivity<Activity$moduleName_Binding,$moduleName_VM>() {
+
+    override fun getLayout(): Any {
+            return $actLayout
+    }
+
+    override fun providerViewModelClass(): Class<$moduleName_VM> {
+            return $moduleName_VM::class.java
+    }
+}

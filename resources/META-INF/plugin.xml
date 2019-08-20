@@ -1,0 +1,40 @@
+<idea-plugin>
+  <id>com.ljq.mvvm.plugin</id>
+  <name>MvvmPlugin</name>
+  <version>1.0</version>
+  <vendor email="lijieqi0801@sina.com" url="https://github.com/lijieqi0801">ljq</vendor>
+
+  <description>
+    support other package name.
+
+    support for auto generating Kotlin code.
+  </description>
+
+  <change-notes>
+    support other package name.
+
+    support for auto generating Kotlin code.
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="ActionAutoKt" class="com.ljq.plugin.action.AutoKtAction" text="New MVVM Kotlin"
+            description="auto ktlin MVVM code">
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="WeighingNewGroup"/>
+    </action>
+  </actions>
+
+</idea-plugin>
