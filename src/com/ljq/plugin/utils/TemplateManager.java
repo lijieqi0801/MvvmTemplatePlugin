@@ -78,8 +78,8 @@ public class TemplateManager {
     }
 
     public Template getTemplateDialogLayout() {
-        InputStream actLayoutInput = action.getClass().getResourceAsStream("/com/ljq/plugin/template/kt/TMvvmLayout.txt");
-        String layoutContent = FileUtils.readTemplateFile(actLayoutInput);
+        InputStream inputStream = action.getClass().getResourceAsStream("/com/ljq/plugin/template/kt/TMvvmLayout.txt");
+        String layoutContent = FileUtils.readTemplateFile(inputStream);
         String layoutDir = resourcePathName + File.separator;
         String fileName = "dialog" + StringUtil.camelToUnderline(moduleName) + ".xml";
         return new Template(layoutDir, fileName, layoutContent);

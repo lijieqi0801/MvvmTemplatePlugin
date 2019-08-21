@@ -64,15 +64,15 @@ public class PackageManager {
     public static String getResourcePathName(String path) {
         String resourcePath = "";
         String resourceMoudle = "";
-        String moudleName = "com"+File.separator+"sandianji"+File.separator+"sdjandroid" + File.separator + "module" + File.separator;
-        if (path.contains(moudleName)) {
-            int index = path.indexOf(moudleName);
-            int nextIndex = path.indexOf(File.separator, index);
-            resourceMoudle = path.substring(index+moudleName.length(), nextIndex+moudleName.length()+1);
-            resourcePath = path.substring(0, path.indexOf("java")) + "resource" + File.separator + resourceMoudle
-                    + File.separator + "layout";
+        String s = "java"+File.separator+"com"+File.separator+"sandianji"+File.separator+"sdjandroid" + File.separator + "module";
+        if (path.contains(s)) {
+            resourcePath =path.replace(s,"resource") + File.separator + "layout";
         }
         return resourcePath;
     }
 
+    public static void main(String[] args) {
+        String path="F:\\workSpace\\app-android\\app\\src\\main\\java\\com\\sandianji\\sdjandroid\\module\\common";
+        getResourcePathName(path);
+    }
 }
